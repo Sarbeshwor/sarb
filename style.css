@@ -19,7 +19,6 @@ body{
     left: 0;
     width: 100%;
     padding: 1.3rem 10%;
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,15 +107,12 @@ body{
 .imageconatiner {
     width: 700px;
     height: 400px;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .imageconatiner img {
@@ -125,13 +121,107 @@ body{
     object-fit: contain;
     border-radius: 10px;
 }
+.works{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+} 
+.section-box{
+    width: calc(45% - 20px);
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 450px;
+}
 
-@media (max-width: 768px){
+    
+
+@media (max-width: 941px){
     .imageconatiner{
         width: 350px;
         height: 200px;
         border-radius: 50px;
-        top: 35%;
         
+    }
+    .works{
+        margin-top: 10px;
+    }
+    
+        .section-box{
+            width: calc(45% - 20px);
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            width: 400px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.fade-in {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fade-in li {
+    list-style: circle;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 941px){
+   .section-box{
+    width: 350px;
+    background-color: white;
+   }
+}
+@media(max-width: 941px){
+    .section-box{
+     width: 300px;
+     background-color: white;
+    }
+ }
+
+@media (min-width: 619px){
+    .section-box{
+        background-color: white;
+        display: inline-block;
+        width: 600px;
+    }
+}
+
+@media (min-width: 390px){
+    .section-box{
+        width: 400px;
+        justify-content: center;
     }
 }
