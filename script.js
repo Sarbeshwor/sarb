@@ -1,15 +1,6 @@
-const menuIcon = document.getElementById('menuIcon');
-const navbar = document.querySelector('.navbar');
-
-menuIcon.addEventListener('click', () => {
-    navbar.classList.toggle('active');
-});
-const changingText = document.getElementById("changing-text");
-const texts = ["Freelancer", "Programmer", "Student"];
-let index = 0;
-
-    var roles = ["Designer", "Programmer","Athlete"]; // Add more roles if needed
-    var descriptions = ["Passionate Figma Designer with an obsession for pixel-perfection. Transforming ideas into intuitive, visually stunning designs","Passionate coder by day, problem solver by night.", "Chasing goals and breaking records."]; // Add more descriptions if needed
+document.addEventListener('DOMContentLoaded', function() {
+    var roles = ["Designer", "Programmer","Athlete"];
+    var descriptions = ["Passionate Figma Designer with an obsession for pixel-perfection. Transforming ideas into intuitive, visually stunning designs", "Passionate coder by day, problem solver by night.", "Chasing goals and breaking records."];
     var currentIndex = 0;
     var dynamicRoleElement = document.querySelector(".dynamic-role");
     var dynamicDescriptionElement = document.querySelector(".dynamic-description");
@@ -34,3 +25,14 @@ let index = 0;
 
     // Add a click event listener to the "See More" button
     seeMoreButton.addEventListener("click", handleSeeMoreClick);
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Your existing code...
+
+    const hireButton = document.getElementById('hireButton');
+    
+    hireButton.addEventListener('click', function() {
+        // Open the Gmail compose link with the pre-filled "To" field
+        window.open('https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwfbFBkPfPcZGFfJQqxcgDHGHZrtNBXHWvHLDdQtLGqHrvZjMFkCWRTQPJHwhKHghDrGq', '_blank');
+    });
+});
