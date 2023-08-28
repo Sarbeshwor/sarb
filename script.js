@@ -36,3 +36,12 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open('https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNwfbFBkPfPcZGFfJQqxcgDHGHZrtNBXHWvHLDdQtLGqHrvZjMFkCWRTQPJHwhKHghDrGq', '_blank');
     });
 });
+
+document.getElementById('hireButton').addEventListener('click', function() {
+    const emailAddress = 'thisisnogom@gmail.com';
+    const subject = 'Hiring Inquiry';
+    
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(subject)}`;
+    
+    window.location.href = mailtoLink;
+});
